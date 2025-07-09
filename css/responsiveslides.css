@@ -1,0 +1,121 @@
+/*! http://responsiveslides.com v1.55 by @arielsalminen */
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+/* =========================================================
+   responsiveslides.css
+   (versión estándar adaptada y con override para full-width)
+   ========================================================= */
+
+
+   .callbacks_container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.rslides li {
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  display: block;
+  position: relative;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Controles de pager / nav */
+.rslides_nav {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 10px 0 0 0;
+}
+
+.rslides_nav a {
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: #666;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.rslides_nav a.active {
+  background: #000;
+}
+
+/* =============== OVERRIDE FINAL PARA FULL WIDTH SLIDER =============== */
+.callbacks_container {
+  position: relative;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+}
+.rslides {
+  width: 100% !important;
+}
+/* =============== FIN DEL OVERRIDE PARA FULL WIDTH SLIDER =============== */
+
+.callbacks_container {
+  width: 100%       !important;
+  max-width: none   !important;
+  margin: 0 auto    !important;
+}
+.rslides {
+  width: 100%       !important;
+}

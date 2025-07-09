@@ -1,0 +1,235 @@
+/* Reset y configuración base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #7e8ba3;
+  font: 300 1rem/1.5 'Helvetica Neue', sans-serif;
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layout principal */
+.align {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.grid {
+  margin: 0 auto;
+  max-width: 25rem;
+  width: 100%;
+}
+
+/* Contenedor del formulario */
+.register {
+  background: rgba(55, 65, 82, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+/* Logo */
+.site__logo {
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.6s ease-in-out;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Título */
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0 0 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Campos del formulario */
+.form__field {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+input {
+  border: 0;
+  font: inherit;
+  outline: 0;
+  padding: 1rem 1.25rem;
+  width: 100%;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  border-color: #8ceabb;
+  box-shadow: 0 0 0 3px rgba(140, 234, 187, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Botón de envío */
+input[type="submit"] {
+  background: linear-gradient(135deg, #8ceabb 0%, #378f7b 100%);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(55, 143, 123, 0.4);
+  background: linear-gradient(135deg, #9cf5cc 0%, #42a085 100%);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+input[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Mensajes de error */
+.error-message,
+.error {
+  background-color: rgba(220, 53, 69, 0.15);
+  border: 1px solid rgba(220, 53, 69, 0.4);
+  color: #ff6b6b;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enlaces de ayuda */
+.help-link {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.help-link a {
+  color: #8ceabb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.help-link a:hover {
+  color: #9cf5cc;
+  text-decoration: underline;
+}
+
+.help-link p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Estados de error en inputs */
+.input-error {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2) !important;
+  background-color: rgba(220, 53, 69, 0.1) !important;
+}
+
+/* Efectos adicionales */
+.register::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(140, 234, 187, 0.1) 0%, rgba(55, 143, 123, 0.1) 100%);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .register {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  .grid {
+    padding: 0 1rem;
+  }
+  
+  input {
+    padding: 0.875rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register {
+    padding: 1.5rem 1rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form__field {
+    margin-bottom: 1.25rem;
+  }
+}

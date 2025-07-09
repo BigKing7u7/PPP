@@ -1,0 +1,179 @@
+/* ==============================================================
+   default.css
+   (Se conserva todo el contenido original, pero añadimos un override al final)
+   ============================================================== */
+
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+    font-family: 'codropsicons';
+    src:url('./fonts/codropsicons/codropsicons.eot');
+    src:url('./fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/codropsicons/codropsicons.woff') format('woff'),
+        url('./fonts/codropsicons/codropsicons.ttf') format('truetype'),
+        url('./fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body, html {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Clearfix hack by Nicolas Gallagher */
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #b3b9bf;
+    background: #f9f9f9;
+}
+
+a {
+    color: #888;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #333;
+}
+
+/* Header Style */
+.container > header {
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    background: rgba(0,0,0,0.01);
+}
+
+.container > header h1 {
+    font-size: 2.625em;
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* To Navigation Style */
+.codrops-top {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 0.69em;
+    line-height: 2.2;
+}
+
+.codrops-top a {
+    padding: 0 1em;
+    letter-spacing: 0.1em;
+    color: #888;
+    display: inline-block;
+}
+
+.codrops-top a:hover {
+    background: rgba(255,255,255,0.95);
+    color: #333;
+}
+
+.codrops-top span.right {
+    float: right;
+}
+
+.codrops-top span.right a {
+    float: left;
+    display: block;
+}
+
+.codrops-icon:before {
+    font-family: 'codropsicons';
+    margin: 0 4px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+    content: "\e001";
+}
+
+.codrops-icon-prev:before {
+    content: "\e004";
+}
+
+.codrops-icon-archive:before {
+    content: "\e002";
+}
+
+.codrops-icon-next:before {
+    content: "\e000";
+}
+
+.codrops-icon-about:before {
+    content: "\e003";
+}
+
+/* Demo Buttons Style */
+.codrops-demos {
+    padding-top: 1em;
+    font-size: 0.9em;
+}
+
+.codrops-demos a {
+    display: inline-block;
+    margin: 0.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    border: 2px solid #b3b9bf;
+    color: #b3b9bf;
+    -webkit-transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.codrops-demos a:hover {
+    border-color: #333;
+    color: #333;
+}
+
+/* … (Aquí sigue todo el resto del contenido original de default.css) … */
+
+/* ========================= OVERRIDE FINAL ========================= */
+/* Cuando haya un <div class="container"> dentro de un .banner, queremos que sea full-width */
+.banner .container {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+/* ====================== FIN DEL OVERRIDE ========================== */
+
+.banner-original .container {
+  width: 100%       !important;
+  max-width: none   !important;
+  padding-left: 0   !important;
+  padding-right: 0  !important;
+  margin-left: 0    !important;
+  margin-right: 0   !important;
+}

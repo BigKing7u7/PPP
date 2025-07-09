@@ -1,0 +1,117 @@
+/* Variables de color */
+:root {
+  --primary: #0a662a;
+  --dark:    #00264d;
+  --light:   #f0fdf4;
+  --white:   #ffffff;
+  --text:    #1f2937;
+  --radius:  0.5rem;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--primary);
+}
+.navbar .nav-link {
+  text-transform: uppercase;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+.navbar .nav-link:hover {
+  color: #ffcc00; /* O un color de hover más suave */
+}
+
+/* Hero */
+.hero-banner {
+  position: relative;
+  background: url('../images/banner.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10,102,42,0.6);
+}
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  padding: 0 1rem;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.hero-content p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+.btn-hero {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: .75rem 1.5rem;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.btn-hero:hover {
+  background-color: #075d1a; /* Un tono más oscuro para hover */
+}
+
+/* Footer */
+.footer-section {
+  background: var(--dark);
+  color: #ccc;
+  padding: 2rem 1rem;
+}
+.footer-section h5 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.footer-links a {
+  color: #ccc;
+  display: block;
+  margin-bottom: .5rem;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover {
+  color: var(--white);
+  text-decoration: underline; /* Mejora la accesibilidad con subrayado */
+}
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid #334;
+  padding-top: 1rem;
+  color: #999;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p  { font-size: 1rem; }
+  .btn-hero {
+    padding: .5rem 1rem; /* Botones más pequeños en pantallas pequeñas */
+  }
+  .footer-section {
+    padding: 1.5rem 1rem;
+  }
+}
